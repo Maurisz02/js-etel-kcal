@@ -11,6 +11,20 @@ function addPizza(){
     let listElem = document.createElement('li');
     listElem.classList.add('list-group-item');
     listElem.textContent = szoveg;
+
+    let torles = document.createElement('button');
+    torles.classList.add('btn');
+    torles.classList.add('btn-danger')
+    torles.textContent = "X";
+
+    torles.addEventListener('click',()=>{
+        listElem.remove();
+        osszKcal -= 800;
+        kcalSzamlalo.textContent = "Össz Kalória: "+ osszKcal;
+    });
+    torles.style.marginLeft = '40px';
+    listElem.appendChild(torles);
+
     list.append(listElem); 
     kcalSzamlalo.textContent = "Össz Kalória: "+ osszKcal;
 }
@@ -22,6 +36,20 @@ function addKfc(){
     let listElem = document.createElement('li');
     listElem.classList.add('list-group-item');
     listElem.textContent = szoveg;
+
+    let torles = document.createElement('button');
+    torles.classList.add('btn');
+    torles.classList.add('btn-danger')
+    torles.textContent = "X";
+
+    torles.addEventListener('click',()=>{
+        listElem.remove();
+        osszKcal -= 1000;
+        kcalSzamlalo.textContent = "Össz Kalória: "+ osszKcal;
+    });
+    torles.style.marginLeft = '40px';
+    listElem.appendChild(torles);
+
     list.append(listElem); 
     kcalSzamlalo.textContent = "Össz Kalória: "+ osszKcal;
 }
@@ -33,6 +61,20 @@ function addMonster(){
     let listElem = document.createElement('li');
     listElem.classList.add('list-group-item');
     listElem.textContent = szoveg;
+
+    let torles = document.createElement('button');
+    torles.classList.add('btn');
+    torles.classList.add('btn-danger')
+    torles.textContent = "X";
+
+    torles.addEventListener('click',()=>{
+        listElem.remove();
+        osszKcal -= 350;
+        kcalSzamlalo.textContent = "Össz Kalória: "+ osszKcal;
+    });
+    torles.style.marginLeft = '40px';
+    listElem.appendChild(torles);
+
     list.append(listElem); 
     kcalSzamlalo.textContent = "Össz Kalória: "+ osszKcal;
 }
