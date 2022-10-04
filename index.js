@@ -1,11 +1,8 @@
-let food = [
-    
-]
-
 
 let osszKcal = 0;
 
 let kcalSzamlalo = document.getElementById('kcal');
+kcalSzamlalo.textContent = "Össz Kalória: "+0; 
 
 function addPizza(){
     let szoveg = "Pizza (800 kcal)"
@@ -40,12 +37,19 @@ function addMonster(){
     kcalSzamlalo.textContent = "Össz Kalória: "+ osszKcal;
 }
 
+function reset(){
+    osszKcal = 0;
+    kcalSzamlalo.textContent = "Össz Kalória: "+ osszKcal;
+    document.getElementById('lista').remove();
+}
+
 
 
 function init (){
 document.getElementById('pizza').addEventListener('click',addPizza);
 document.getElementById('kfc').addEventListener('click',addKfc);
 document.getElementById('monster').addEventListener('click',addMonster);
+document.getElementById('resetButton').addEventListener('click',reset);
 }
 
 document.addEventListener('DOMContentLoaded',init);
